@@ -14,16 +14,41 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style type="text/css">
+      .banner {
+          height: 75px;
+          margin: 10px -10px 10px;
+          background-color: rgb(66, 196, 247);
+          border-radius: 2px;
+      }
+      .banner h2{
+          color: white;
+          padding-top: 15px;
+          margin-left: 2%;
+          display: inline-block;
+      }
+      .banner img{
+          position: relative;
+          float: right;
+          right: 10px;
+          height: 75px;
+      }
+    </style>
 </head>
 
 <body>
     <div class="container">
+      <div class="banner">
+        <h2>AWS Batch test ほげ</h2>
+        <img src="https://s3-ap-northeast-1.amazonaws.com/msrks/transparent.png" style="float: right">
+        <img src="static/mitsu.png" style="float: right">
+      </div>
       <h3>画像を投稿してください</h3>
       <hr>
       <form action="{{ url_for('img') }}" method="post" enctype="multipart/form-data">
         <label for="img">image</label>
         <input type="file" class="form-control" id="img" name="img">
-        <input type="submit" class="primary" value="submit">
+        <input type="submit" class="btn-primary" value="submit">
       </form>
     </div>
 
